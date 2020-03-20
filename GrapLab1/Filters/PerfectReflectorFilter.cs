@@ -22,9 +22,12 @@ namespace GrapLab1
                     return null;
                 for (int j = 0; j < sourceImage.Height; j++)
                 {
-                    if (sourceImage.GetPixel(i, j).R > Rmax) Rmax = sourceImage.GetPixel(i, j).R;
-                    if (sourceImage.GetPixel(i, j).G > Gmax) Gmax = sourceImage.GetPixel(i, j).G;
-                    if (sourceImage.GetPixel(i, j).B > Bmax) Bmax = sourceImage.GetPixel(i, j).B;
+                    if (sourceImage.GetPixel(i, j).R > Rmax) 
+                        Rmax = sourceImage.GetPixel(i, j).R;
+                    if (sourceImage.GetPixel(i, j).G > Gmax) 
+                        Gmax = sourceImage.GetPixel(i, j).G;
+                    if (sourceImage.GetPixel(i, j).B > Bmax) 
+                        Bmax = sourceImage.GetPixel(i, j).B;
                 }
             }
 

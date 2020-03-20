@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GrapLab1
@@ -141,6 +135,12 @@ namespace GrapLab1
         private void идеальныйToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PerfectReflectorFilter filter = new PerfectReflectorFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void коррекцияСОпорнымЦветомToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CorrectionWithReferenceColor filter = new CorrectionWithReferenceColor();
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }

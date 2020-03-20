@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\CorrectionWithReferenceColor.cs" />
     <Compile Include="Filters\Filters.cs" />
     <Compile Include="Filters\PerfectReflectorFilter.cs" />
     <Compile Include="Form1.cs">

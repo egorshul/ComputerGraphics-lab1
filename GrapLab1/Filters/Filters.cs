@@ -67,8 +67,8 @@ namespace GrapLab1
             Color sourceColor = sourceImage.GetPixel(x, y);
             int Intensity = (int)((float)0.299 * sourceColor.R + (float)0.587 * sourceColor.G + (float)0.114 * sourceColor.B);
             Color resultColor = Color.FromArgb(Clamp(Intensity + 2 * k, 0, 255),
-                                              Clamp((int)(Intensity + (float)0.5 * k), 0, 255),
-                                              Clamp((Intensity - 1 * k), 0, 255));
+                                               Clamp((int)(Intensity + (float)0.5 * k), 0, 255),
+                                               Clamp((Intensity - 1 * k), 0, 255));
             return resultColor;
         }
     }
@@ -79,8 +79,8 @@ namespace GrapLab1
         {
             Color sourceColor = sourceImage.GetPixel(x, y);
             Color resultColor = Color.FromArgb(Clamp(sourceColor.R + 10, 0, 255),
-                                              Clamp(sourceColor.G + 10, 0, 255),
-                                              Clamp(sourceColor.B + 10, 0, 255));
+                                               Clamp(sourceColor.G + 10, 0, 255),
+                                               Clamp(sourceColor.B + 10, 0, 255));
             return resultColor;
         }
     }
@@ -116,8 +116,7 @@ namespace GrapLab1
             return Color.FromArgb(
                 Clamp((int)resultR, 0, 255),
                 Clamp((int)resultG, 0, 255),
-                Clamp((int)resultB, 0, 255)
-                );
+                Clamp((int)resultB, 0, 255));
         }
     }
 
