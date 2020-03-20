@@ -143,5 +143,11 @@ namespace GrapLab1
             CorrectionWithReferenceColor filter = new CorrectionWithReferenceColor();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void линейноеРастяжениеГистограммыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LinearStretchingHistogram filter = new LinearStretchingHistogram();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
