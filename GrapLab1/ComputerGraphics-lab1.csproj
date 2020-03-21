@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Filters\CorrectionWithReferenceColor.cs" />
     <Compile Include="Filters\Filters.cs" />
+    <Compile Include="Filters\MedianFilter.cs" />
     <Compile Include="Filters\PerfectReflectorFilter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

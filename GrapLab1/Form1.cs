@@ -149,5 +149,11 @@ namespace GrapLab1
             LinearStretchingHistogram filter = new LinearStretchingHistogram();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void медианныйФильтрToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MedianFilter filter = new MedianFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
