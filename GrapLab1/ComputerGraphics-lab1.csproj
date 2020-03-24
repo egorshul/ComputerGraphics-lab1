@@ -36,6 +36,12 @@
     <ApplicationIcon>setting_settings_balance_icon_134493.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,10 +55,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\CarryFilter.cs" />
     <Compile Include="Filters\CorrectionWithReferenceColor.cs" />
     <Compile Include="Filters\Filters.cs" />
+    <Compile Include="Filters\GlassFilter.cs" />
     <Compile Include="Filters\MedianFilter.cs" />
+    <Compile Include="Filters\MotionBlurFilter.cs" />
     <Compile Include="Filters\PerfectReflectorFilter.cs" />
+    <Compile Include="Filters\SharpenFilter.cs" />
+    <Compile Include="Filters\TurnFilter.cs" />
+    <Compile Include="Filters\WavesFilter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
