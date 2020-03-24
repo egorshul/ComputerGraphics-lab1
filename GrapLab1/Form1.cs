@@ -155,5 +155,41 @@ namespace GrapLab1
             MedianFilter filter = new MedianFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void поворотToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TurnFilter filter = new TurnFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void переносToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CarryFilter filter = new CarryFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void волныToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WavesFilter filter = new WavesFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void стеклаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GlassFilter filter = new GlassFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void размытостьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MotionBlurFilter filter = new MotionBlurFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void резкостьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SharpenFilter filter = new SharpenFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
