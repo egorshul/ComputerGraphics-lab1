@@ -11,3 +11,16 @@ C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-
 C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.csproj.CopyComplete
 C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.exe
 C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.pdb
+D:\ComputerGraphics-lab1\GrapLab1\bin\Debug\ComputerGraphics-lab1.exe.config
+D:\ComputerGraphics-lab1\GrapLab1\bin\Debug\ComputerGraphics-lab1.exe
+D:\ComputerGraphics-lab1\GrapLab1\bin\Debug\ComputerGraphics-lab1.pdb
+D:\ComputerGraphics-lab1\GrapLab1\bin\Debug\Microsoft.Owin.dll
+D:\ComputerGraphics-lab1\GrapLab1\bin\Debug\Owin.dll
+D:\ComputerGraphics-lab1\GrapLab1\bin\Debug\Microsoft.Owin.xml
+D:\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.csprojAssemblyReference.cache
+D:\ComputerGraphics-lab1\GrapLab1\obj\Debug\GrapLab1.Form1.resources
+D:\ComputerGraphics-lab1\GrapLab1\obj\Debug\GrapLab1.Properties.Resources.resources
+D:\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.csproj.GenerateResource.cache
+D:\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.csproj.CopyComplete
+D:\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.exe
+D:\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.pdb

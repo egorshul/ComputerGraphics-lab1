@@ -126,69 +126,69 @@ namespace GrapLab1
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void серыйМирToolStripMenuItem_Click(object sender, EventArgs e)
+        private void серыйМирToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             GrayWorldFilter filter = new GrayWorldFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void идеальныйToolStripMenuItem_Click(object sender, EventArgs e)
+        private void идеальныйОтражательToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PerfectReflectorFilter filter = new PerfectReflectorFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void коррекцияСОпорнымЦветомToolStripMenuItem_Click(object sender, EventArgs e)
+        private void коррекцияСОпорнымЦветомToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             CorrectionWithReferenceColor filter = new CorrectionWithReferenceColor();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void линейноеРастяжениеГистограммыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void идеальныйОтражательToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             LinearStretchingHistogram filter = new LinearStretchingHistogram();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void медианныйФильтрToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            MedianFilter filter = new MedianFilter();
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
-
-        private void поворотToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TurnFilter filter = new TurnFilter();
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
-
-        private void переносToolStripMenuItem_Click(object sender, EventArgs e)
+        private void переносToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             CarryFilter filter = new CarryFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void волныToolStripMenuItem_Click(object sender, EventArgs e)
+        private void поворотToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TurnFilter filter = new TurnFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void волныToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WavesFilter filter = new WavesFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void стеклаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void эфектToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GlassFilter filter = new GlassFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void размытостьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void motionBlurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MotionBlurFilter filter = new MotionBlurFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void резкостьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void резкостьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             SharpenFilter filter = new SharpenFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void медианToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MedianFilter filter = new MedianFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }
