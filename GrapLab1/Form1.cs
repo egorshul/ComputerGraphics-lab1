@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GrapLab1
@@ -18,7 +19,7 @@ namespace GrapLab1
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Image files|*.png;*.jpg;*.bmp|All files(*.*)|*.*";
-            if(dialog.ShowDialog() == DialogResult.OK)
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 image = new Bitmap(dialog.FileName);
                 pictureBox1.Image = image;
@@ -71,7 +72,7 @@ namespace GrapLab1
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if(!e.Cancelled)
+            if (!e.Cancelled)
             {
                 pictureBox1.Image = image;
                 pictureBox1.Refresh();
@@ -98,98 +99,135 @@ namespace GrapLab1
 
         private void grayScaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GrayScaleFilter filter = new GrayScaleFilter();
+            Filters filter = new GrayScaleFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void сепияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SepiaFilter filter = new SepiaFilter();
+            Filters filter = new SepiaFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void увеличитьЯркостьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IncreaseBrightness filter = new IncreaseBrightness();
+            Filters filter = new IncreaseBrightness();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void собеляToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SobelFilter filter = new SobelFilter();
+            Filters filter = new SobelFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void повышениеРезкостиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IncreaseSharpness filter = new IncreaseSharpness();
+            Filters filter = new IncreaseSharpness();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void серыйМирToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            GrayWorldFilter filter = new GrayWorldFilter();
+            Filters filter = new GrayWorldFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void идеальныйОтражательToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PerfectReflectorFilter filter = new PerfectReflectorFilter();
+            Filters filter = new PerfectReflectorFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void коррекцияСОпорнымЦветомToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CorrectionWithReferenceColor filter = new CorrectionWithReferenceColor();
+            Filters filter = new CorrectionWithReferenceColor();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void идеальныйОтражательToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            LinearStretchingHistogram filter = new LinearStretchingHistogram();
+            Filters filter = new LinearStretchingHistogram();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void переносToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CarryFilter filter = new CarryFilter();
+            Filters filter = new CarryFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void поворотToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TurnFilter filter = new TurnFilter();
+            Filters filter = new TurnFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void волныToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            WavesFilter filter = new WavesFilter();
+            Filters filter = new WavesFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void эфектToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GlassFilter filter = new GlassFilter();
+            Filters filter = new GlassFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void motionBlurToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MotionBlurFilter filter = new MotionBlurFilter();
+            Filters filter = new MotionBlurFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void резкостьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SharpenFilter filter = new SharpenFilter();
+            Filters filter = new SharpenFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void медианToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MedianFilter filter = new MedianFilter();
+            Filters filter = new MedianFilter();
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void тиснениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new StampingFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void выделеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Filters filter = new BorderSelectionFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void светящиесяКраяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new MedianFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+
+            while (backgroundWorker1.IsBusy)
+            {
+                Thread.Sleep(200);
+                Application.DoEvents();
+            }
+
+            Filters filter2 = new BorderSelectionFilter();
+            backgroundWorker1.RunWorkerAsync(filter2);
+
+            while (backgroundWorker1.IsBusy)
+            {
+                Thread.Sleep(400);
+                Application.DoEvents();
+            }
+
+            MaxFilter filter3 = new MaxFilter();
+            backgroundWorker1.RunWorkerAsync(filter3);
         }
     }
 }

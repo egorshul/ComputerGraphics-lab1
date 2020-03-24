@@ -55,14 +55,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\BorderSelectionFilter.cs" />
     <Compile Include="Filters\CarryFilter.cs" />
     <Compile Include="Filters\CorrectionWithReferenceColor.cs" />
     <Compile Include="Filters\Filters.cs" />
     <Compile Include="Filters\GlassFilter.cs" />
+    <Compile Include="Filters\MaxFilter.cs" />
     <Compile Include="Filters\MedianFilter.cs" />
     <Compile Include="Filters\MotionBlurFilter.cs" />
     <Compile Include="Filters\PerfectReflectorFilter.cs" />
     <Compile Include="Filters\SharpenFilter.cs" />
+    <Compile Include="Filters\StampingFilter.cs" />
     <Compile Include="Filters\TurnFilter.cs" />
     <Compile Include="Filters\WavesFilter.cs" />
     <Compile Include="Form1.cs">
