@@ -9,9 +9,11 @@ namespace GrapLab1
     public partial class Form1 : Form
     {
         Bitmap image;
+        public int[,] StructElem;
 
         public Form1()
         {
+            StructElem = new int[3, 3] { { 1, 1, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
             InitializeComponent();
         }
 
@@ -228,6 +230,54 @@ namespace GrapLab1
 
             MaxFilter filter3 = new MaxFilter();
             backgroundWorker1.RunWorkerAsync(filter3);
+        }
+
+        private void переводВБинарноеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BinaryFilter filter = new BinaryFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void расширениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dilation filter = new Dilation(StructElem);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void сужениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Erosion filter = new Erosion(StructElem);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void открытиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Opening filter = new Opening();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void закрытиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Closing filter = new Closing();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void topHatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TopHat filter = new TopHat();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void blackHatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BlackHat filter = new BlackHat();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void gradToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Grad filter = new Grad();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
     }
 }
