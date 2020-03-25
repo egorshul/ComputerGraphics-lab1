@@ -278,6 +278,25 @@ namespace GrapLab1
         {
             Grad filter = new Grad();
             backgroundWorker1.RunWorkerAsync(filter);
+
+        }
+
+        private void задатьСтруктурныйЭлементToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                    StructElem[i, j] = form2.StructElem[i, j];
+        }
+
+        private void задатьСтруктурныйЭлементToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                    StructElem[i, j] = form2.StructElem[i, j];
         }
     }
 }
