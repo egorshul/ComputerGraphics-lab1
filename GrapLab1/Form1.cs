@@ -56,7 +56,7 @@ namespace GrapLab1
 
         private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InvertFilter filter = new InvertFilter();
+            Filters filter = new InvertFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
@@ -228,75 +228,68 @@ namespace GrapLab1
                 Application.DoEvents();
             }
 
-            MaxFilter filter3 = new MaxFilter();
+            Filters filter3 = new MaxFilter();
             backgroundWorker1.RunWorkerAsync(filter3);
         }
 
         private void переводВБинарноеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BinaryFilter filter = new BinaryFilter();
+            Filters filter = new BinaryFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void расширениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Dilation filter = new Dilation(StructElem);
+            Filters filter = new Dilation(StructElem);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void сужениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Erosion filter = new Erosion(StructElem);
+            Filters filter = new Erosion(StructElem);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void открытиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Opening filter = new Opening();
+            Filters filter = new Opening();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void закрытиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Closing filter = new Closing();
+            Filters filter = new Closing();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void topHatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TopHat filter = new TopHat();
+            Filters filter = new TopHat();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void blackHatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BlackHat filter = new BlackHat();
+            Filters filter = new BlackHat();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void gradToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Grad filter = new Grad();
+            Filters filter = new Grad();
             backgroundWorker1.RunWorkerAsync(filter);
 
         }
 
         private void задатьСтруктурныйЭлементToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-            for (int i = 0; i < 3; i++)
-                for (int j = 0; j < 3; j++)
-                    StructElem[i, j] = form2.StructElem[i, j];
-        }
 
-        private void задатьСтруктурныйЭлементToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
             Form2 form2 = new Form2();
             form2.ShowDialog();
             for (int i = 0; i < 3; i++)
                 for (int j = 0; j < 3; j++)
                     StructElem[i, j] = form2.StructElem[i, j];
+
         }
     }
 }

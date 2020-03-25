@@ -427,7 +427,7 @@
             this.задатьСтруктурныйЭлементToolStripMenuItem.Name = "задатьСтруктурныйЭлементToolStripMenuItem";
             this.задатьСтруктурныйЭлементToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.задатьСтруктурныйЭлементToolStripMenuItem.Text = "Задать структурный элемент";
-            this.задатьСтруктурныйЭлементToolStripMenuItem.Click += new System.EventHandler(this.задатьСтруктурныйЭлементToolStripMenuItem_Click_1);
+            this.задатьСтруктурныйЭлементToolStripMenuItem.Click += new System.EventHandler(this.задатьСтруктурныйЭлементToolStripMenuItem_Click);
             // 
             // Form1
             // 
