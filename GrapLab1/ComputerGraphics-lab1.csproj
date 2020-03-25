@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\BinaryFilter.cs" />
+    <Compile Include="Filters\BinaryOperations.cs" />
     <Compile Include="Filters\BorderSelectionFilter.cs" />
     <Compile Include="Filters\CarryFilter.cs" />
     <Compile Include="Filters\CorrectionWithReferenceColor.cs" />
