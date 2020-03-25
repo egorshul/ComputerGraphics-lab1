@@ -11,3 +11,4 @@ C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-
 C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.csproj.CopyComplete
 C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.exe
 C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\ComputerGraphics-lab1.pdb
+C:\Users\Oleg\Desktop\ComputerGraphics-lab1\GrapLab1\obj\Debug\GrapLab1.Form2.resources
