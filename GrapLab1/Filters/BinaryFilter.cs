@@ -14,8 +14,8 @@ namespace GrapLab1
     {
         protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
         {
-            Color s = sourceImage.GetPixel(x, y);
-            if (s.R < 127 && s.G < 127 && s.B < 127)
+            Color sourceColor = sourceImage.GetPixel(x, y);
+            if (sourceColor.R < 127 && sourceColor.G < 127 && sourceColor.B < 127)
                 return Color.FromArgb(0, 0, 0);
             else
                 return Color.FromArgb(255, 255, 255);
